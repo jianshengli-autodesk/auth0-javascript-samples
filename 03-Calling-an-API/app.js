@@ -67,6 +67,7 @@ window.addEventListener('load', function() {
   });
 
   function login() {
+    console.log('£££££££££££££££££££££££££ in Login()');
     webAuth.authorize();
   }
 
@@ -151,7 +152,9 @@ window.addEventListener('load', function() {
   }
 
   function handleAuthentication() {
+    console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ webAuth = ', webAuth);
     webAuth.parseHash(function(err, authResult) {
+      console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ authResult = ', authResult);
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         setSession(authResult);

@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
 
   homeViewBtn.addEventListener('click', function() {
     homeView.style.display = 'inline-block';
-    loginView.style.display = 'none';
+    //loginView.style.display = 'none';
   });
 
   loginBtn.addEventListener('click', function(e) {
@@ -61,6 +61,7 @@ window.addEventListener('load', function() {
   }
 
   function handleAuthentication() {
+    console.log('££££££££££££££££££££££££ localStorage = ', localStorage);
     webAuth.parseHash(function(err, authResult) {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';

@@ -109,6 +109,7 @@ window.addEventListener('load', function() {
   }
 
   function displayProfile() {
+    console.log('£££££££££££££££££££££££££££ userProfile = ', userProfile);
     // display the profile
     document.querySelector('#profile-view .nickname').innerHTML =
       userProfile.nickname;
