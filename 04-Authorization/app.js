@@ -120,6 +120,9 @@ window.addEventListener('load', function() {
     // use the scopes as requested. If no scopes were requested,
     // set it to nothing
     const scopes = authResult.scope || requestedScopes || '';
+    console.log('£££££££££££££££££££££££££££££ scopes = ', scopes);
+    console.log('£££££££££££££££££££££££££££££ authResult.scope = ', authResult.scope);
+    console.log('£££££££££££££££££££££££££££££ requestedScopes = ', requestedScopes);
 
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
